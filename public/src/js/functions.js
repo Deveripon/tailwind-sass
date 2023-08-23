@@ -66,9 +66,9 @@ function successalertMassage(massage) {
 
 function sendData(key, data) {
   let userData = [];
-  let lsData = localStorage.getItem(key)
-    ? JSON.parse(localStorage.getItem(key))
-    : null;
+  let lsData = localStorage.getItem(key) ?
+    JSON.parse(localStorage.getItem(key)) :
+    null;
   if (!lsData) {
     userData.push(data);
     localStorage.setItem(key, JSON.stringify(userData));
@@ -81,8 +81,7 @@ function sendData(key, data) {
 
 //data get from localStorage
 function getData(key) {
-  return localStorage.getItem(key)
-    ? JSON.parse(localStorage.getItem(key))
-    : false;
+  return localStorage.getItem(key) ?
+    JSON.parse(localStorage.getItem(key)) :
+    false;
 }
-
